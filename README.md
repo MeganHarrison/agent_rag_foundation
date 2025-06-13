@@ -67,6 +67,18 @@ foundational-rag-agent/
 2. Ask questions to the AI agent
 3. View responses with source attribution
 
+## Deployment with Docker on Render
+
+To deploy this application on Render, build the provided `Dockerfile` and set th
+e service command to:
+
+```bash
+streamlit run ui/app.py --server.port $PORT --server.address 0.0.0.0
+```
+
+Render automatically injects the `PORT` environment variable which the
+container uses to expose the Streamlit UI.
+
 ## Dependencies
 
 - Python 3.11+
